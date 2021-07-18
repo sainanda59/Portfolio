@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e9cb9b0869.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="style.css" type="text/css" />
 
     <title>It's Me Sai</title>
@@ -14,44 +22,108 @@
       <input type="checkbox" onclick="switchon()" id="toggle" />
       <div class="navbar" id="navbar">
         <a class="nav-links" onclick="switchoff()" href="#home">Home</a>
-        <a class="nav-links" onclick="switchoff()" href="#about">About</a>
         <a class="nav-links" onclick="switchoff()" href="#skills">Skills</a>
-        <a class="nav-links" onclick="switchoff()" href="#education">Education</a>
-        <a class="nav-links" onclick="switchoff()" href="#work">Work</a>
+        <a class="nav-links" onclick="switchoff()" href="#eduwork">Work & Education</a>
         <a class="nav-links" onclick="switchoff()" href="#contact">Contact</a>
+        <button class="nav-links theme" id="theme" onclick="themecng()">
+          Theme<i class="fas fa-adjust"></i>
+        </button>
       </div>
     </div>
 
-
     <div class="sections" id="home">
- 
+      <div class="img-cont">
+        <img id="pp" src="imgpp1.jpg" alt="sai">
+      </div>
+      <div class="info-cont" >
+        <p class="wtext">Hey, I am Sai,</p>
+        <p id="info">
+          a Freshman in B.Tech,
+          from Odisha University of Technology and Research(CET BBSR), 
+          currently exploring the world of Web Development. 
+          I am also keenly interested in Competitive Programming, 
+          and I am a Foodie currently residing in Temple City Bhubaneswar. 
+          I have a Youtube channel called Eduskool:Learn from Home.
+        </p>
+      </div>
+     
+      
+
     </div>
 
-    <div class="sections" id="about">
-  
-    </div>
 
     <div class="sections" id="skills">
-  
+      <div class="skill-bar">
+        <div class="skill-prog wid-90">
+            <div id="skill-name">C</div>
+            90%
+        </div>
+       
     </div>
 
-    <div class="sections" id="education">
+    <div class="skill-bar">
+      <div class="skill-prog wid-65">
+          <div id="skill-name">PYTHON</div>
+          65%
+      </div>
+      
+  </div>
+
+    <div class="skill-bar">
+        <div class="skill-prog wid-75">
+            <div id="skill-name">C++</div>
+            75%
+         </div>
+        
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-prog wid-65">
+            <div id="skill-name">CP</div>
+            65%
+        </div>
+        
+    </div>
+
+    <div class="skill-bar">
+        <div class="skill-prog wid-85">
+            <div id="skill-name">HTML</div>
+            85%
+        </div>
 
     </div>
 
-    <div class="sections" id="work">
+    <div class="skill-bar">
+        <div class="skill-prog wid-75">
+            <div id="skill-name">CSS</div>
+                 75%
+        </div>
+        
+    </div>
+
+    <div class="skill-bar">
+      <div class="skill-prog wid-60">
+          <div id="skill-name">JS</div>
+               60%
+      </div>
+      
+  </div>
+    </div>
+
+    <div class="sections" id="eduwork">
+
+
+
+      
 
     </div>
 
-    <div class="sections" id="contact">
-
-    </div>
+    <div class="sections" id="contact"></div>
 
     <script type="text/javascript">
-
       function switchon() {
         var checkbox = document.getElementById("navbar");
-        if ((checkbox.style.display == "none")) {
+        if (checkbox.style.display == "none") {
           checkbox.style.display = "block";
         } else {
           switchoff();
@@ -60,9 +132,14 @@
 
       function switchoff() {
         var checkbox = document.getElementById("navbar");
-        if(window.innerWidth < 800){
-        checkbox.style.display = "none";
+        if (window.innerWidth < 800) {
+          checkbox.style.display = "none";
         }
+      }
+
+      function themecng() {
+        var theme = document.body;
+        theme.classList.toggle("light-theme");
       }
     </script>
   </body>
