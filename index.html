@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" />
 
     <title>It's Me Sai</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav">
-        <label class="menu-btn"  for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle">
-        <div class="navbar">
-           <a class=" nav-items nav-links" href="">Home</a>
-            <a class="nav-items nav-links" href="">About</a>
-            <a class="nav-items nav-links" href="">Skills</a>
-            <a class="nav-items nav-links" href="">Education</a>
-            <a class="nav-items nav-links" href="">Work</a>
-            <a class="nav-items nav-links" href="">Project</a>
-            <a class="nav-items nav-links" href="">Profile</a>
-            <a class="nav-items nav-links" href="">Contact</a>
-            
-        </div>
-        
+      <label class="menu-btn" for="toggle">&#9776;</label>
+      <input type="checkbox" onclick="switchon()" id="toggle" />
+      <div class="navbar" id="navbar">
+        <a class="nav-links" onclick="switchoff()" href="#home">Home</a>
+        <a class="nav-links" onclick="switchoff()" href="#about">About</a>
+        <a class="nav-links" onclick="switchoff()" href="#skills">Skills</a>
+        <a class="nav-links" onclick="switchoff()" href="#education">Education</a>
+        <a class="nav-links" onclick="switchoff()" href="#work">Work</a>
+        <a class="nav-links" onclick="switchoff()" href="#contact">Contact</a>
+      </div>
+    </div>
 
 
+    <div class="sections" id="home">
+ 
+    </div>
+
+    <div class="sections" id="about">
+  
+    </div>
+
+    <div class="sections" id="skills">
+  
+    </div>
+
+    <div class="sections" id="education">
 
     </div>
 
- 
+    <div class="sections" id="work">
 
+    </div>
 
+    <div class="sections" id="contact">
 
-</body>
+    </div>
 
+    <script type="text/javascript">
+
+      function switchon() {
+        var checkbox = document.getElementById("navbar");
+        if ((checkbox.style.display == "none")) {
+          checkbox.style.display = "block";
+        } else {
+          switchoff();
+        }
+      }
+
+      function switchoff() {
+        var checkbox = document.getElementById("navbar");
+        if(window.innerWidth < 800){
+        checkbox.style.display = "none";
+        }
+      }
+    </script>
+  </body>
 </html>
